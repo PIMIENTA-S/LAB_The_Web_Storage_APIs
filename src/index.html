@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Pokémon Finder</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Buscador de Pokémon</h1>
-  <input type="text" id="pokemonInput" placeholder="Escribe el nombre del Pokémon">
-  <button onclick="buscarPokemon()">Buscar</button>
-  <button onclick="mostrarFavoritos()">Mostrar favoritos</button>
+    <div>
+        <img src="img/poke.png" alt="">
+
+        <h1 class="title">Buscador de Pokémon</h1>
+    </div>
+  <div class="buscador">
+    <input type="text" id="pokemonInput" placeholder="Escribe el nombre del Pokémon">
+    <button class="button" onclick="buscarPokemon()">Buscar</button>
+    <button class="button" onclick="mostrarFavoritos()">Mostrar favoritos</button>
+  </div>
   
   
   <div id="result">
     <!-- aca estaran des js -->
   </div>
   
-  
-  <div id="favoritos">
+  <div id="favoritos" class="favoritos-container">
         <h2>Favoritos</h2>
 
     </div>

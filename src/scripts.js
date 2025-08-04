@@ -35,13 +35,15 @@ function buscarPokemon() {
     .then(data => {
       pokemonActual = {
         nombre: data.name,
-        imagen: data.sprites.front_default
+        imagen: data.sprites.other.dream_world.front_default || data.sprites.other["official-artwork"].front_default
       };
 
       document.getElementById("result").innerHTML = `
-        <h3>${pokemonActual.nombre}</h3>
-        <img src="${pokemonActual.imagen}" alt="${pokemonActual.nombre}">
-        <button onclick="saveFavorite()">Guardar como favorito</button>
+        <div class="favorito-card result-card">
+            <h3>${pokemonActual.nombre}</h3>
+            <img src="${pokemonActual.imagen}" alt="${pokemonActual.nombre}">
+            <button onclick="saveFavorite()">Guardar como favorito</button>
+        </div>
       `;
     })
     .catch(() => {
@@ -79,8 +81,8 @@ contenedor.innerHTML = "";
 
 favoritos.forEach(p => {
     contenedor.innerHTML += `
-    <div>
-        <h4>${p.nombre}</h4>
+    <div class="favorito-card">
+        <h4>${p.nombre.toUpperCase()}</h4>
         <img src="${p.imagen}" alt="${p.nombre}">
     </div>
     `;
