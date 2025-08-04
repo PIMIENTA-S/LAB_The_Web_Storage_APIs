@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Pokémon Finder</title>
 </head>
 <body>
-    
+  <h1>Buscador de Pokémon</h1>
+  <input type="text" id="pokemonInput" placeholder="Escribe el nombre del Pokémon">
+  <button onclick="buscarPokemon()">Buscar</button>
+  <button onclick="mostrarFavoritos()">Mostrar favoritos</button>
+  
+  
+  <div id="result">
+    <!-- aca estaran des js -->
+  </div>
+  
+  
+  <div id="favoritos">
+        <h2>Favoritos</h2>
+
+    </div>
+
+
+  <script src="scripts.js"></script>
 </body>
 </html>
