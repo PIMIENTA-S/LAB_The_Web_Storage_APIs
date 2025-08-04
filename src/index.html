@@ -1,33 +1,32 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Pokémon Finder</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div>
-        <img src="img/poke.png" alt="">
+  <!DOCTYPE html>
+  <html lang="es">
 
-        <h1 class="title">Buscador de Pokémon</h1>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pokémon Finder</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h1 class="title">BUSCADOR DE POKEMONES</h1>
+    <div class="buscador">
+      <input type="text" id="pokemonInput" placeholder="Escribe el nombre del Pokémon">
+      <button class="button" onclick="buscarPokemon()">Buscar</button>
+      <button class="button" onclick="mostrarFavoritos()">Mostrar favoritos</button>
     </div>
-  <div class="buscador">
-    <input type="text" id="pokemonInput" placeholder="Escribe el nombre del Pokémon">
-    <button class="button" onclick="buscarPokemon()">Buscar</button>
-    <button class="button" onclick="mostrarFavoritos()">Mostrar favoritos</button>
-  </div>
-  
-  
-  <div id="result">
-    <!-- aca estaran des js -->
-  </div>
-  
-  <div id="favoritos" class="favoritos-container">
-        <h2>Favoritos</h2>
+
+
+    <div id="result">
+      <!-- aca estaran des js -->
+    </div>
+
+    <div id="favoritos" class="favoritos-container">
+      
 
     </div>
 
 
-  <script src="scripts.js"></script>
-</body>
-</html>
+    <script src="scripts.js"></script>
+  </body>
+
+  </html>

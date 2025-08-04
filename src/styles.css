@@ -1,84 +1,96 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #E0F7FA;
-    margin: 0;
-    padding: 20px;
-    color: #37474F;
-  }
-  
-  #favoritos {
-    margin-top: 40px;
-  }
-  
-  #favoritos h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #EF5350;
-  }
-  
-  .favoritos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .favorito-card {
-    background-color: #EF5350;
-    border-radius: 12px;
-    padding: 10px;
-    width: 180px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease;
-  }
-  
-  .favorito-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .favorito-card img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-  
-  .favorito-card h3 {
-    margin: 0;
-    font-size: 1.2em;
-    text-transform: capitalize;
-  }
-  
-  .favorito-card button {
-    margin-top: 10px;
-    background-color: #FFEB3B;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #37474F;
-    transition: background-color 0.3s ease;
-  }
-  
-  .favorito-card button:hover {
-    background-color: #FF9800;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #E0F7FA;
+  margin: 0;
+  padding: 20px;
+  color: #37474F;
+}
 
-  .button {
-    padding: 10px 16px;
-    margin-left: 5px;
-    background-color: #ffcb05;
-    color: #2a75bb;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.title {
+  text-align: center;
+}
 
-  .result-card{
-    margin: 20px;
-  }
+.buscador {
+  display: flex;
+  justify-content: center;
+}
+
+#favoritos {
+  margin-top: 40px;
+}
+
+#favoritos-title {
+  display: none;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #EF5350;
+}
+
+.favoritos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.favorito-card {
+  background-color: #EF5350;
+  border-radius: 12px;
+  padding: 10px;
+  width: 180px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.favorito-card:hover {
+  transform: scale(1.05);
+}
+
+.favorito-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.favorito-card h3 {
+  margin: 0;
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+
+.favorito-card button {
+  margin-top: 10px;
+  background-color: #FFEB3B;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #37474F;
+  transition: background-color 0.3s ease;
+}
+
+.favorito-card button:hover {
+  background-color: #FF9800;
+}
+
+.button {
+  padding: 10px 16px;
+  margin-left: 5px;
+  background-color: #ffcb05;
+  color: #2a75bb;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#result {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+}
