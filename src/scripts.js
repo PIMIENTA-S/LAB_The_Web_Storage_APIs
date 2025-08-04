@@ -116,10 +116,8 @@ function mostrarFavoritos() {
   const contenedor = document.getElementById("favoritos");
   contenedor.innerHTML = "";
 
-
   favoritos.forEach(p => {
     contenedor.innerHTML += `
-    <h2 id="favoritos-title">Favoritos</h2>
     <div class="favorito-card">
         <h4>${p.nombre.toUpperCase()}</h4>
         <img src="${p.imagen}" alt="${p.nombre}">
@@ -140,6 +138,3 @@ function mostrarFavoritos() {
 
 
 
-
-// .then(res => res.json())
-// .then(data => {
