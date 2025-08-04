@@ -13,16 +13,17 @@ body {
 .buscador {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
-#favoritos {
-  margin-top: 40px;
+#favoritos-all {
+  margin-top: 50px;
 }
 
 #favoritos-title {
   text-align: center;
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #EF5350;
 }
 

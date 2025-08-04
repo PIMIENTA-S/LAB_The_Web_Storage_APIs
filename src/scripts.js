@@ -40,8 +40,8 @@ let pokemonActual = null;
 // }
 
 function buscarPokemon() {
-  const contenedor = document.getElementById("favoritos");
-  contenedor.innerHTML = "";
+  const contenedor_all = document.getElementById("favoritos-all");
+  contenedor_all.innerHTML = "";
 
   const nombre = document.getElementById("pokemonInput").value.toLowerCase();
   const url = `https://pokeapi.co/api/v2/pokemon/${nombre}`;
@@ -79,6 +79,7 @@ function buscarPokemon() {
       })
       .catch(() => {
         alert("¡Error! Pokémon no encontrado");
+        mostrarFavoritos();
       });
   }
 
@@ -109,15 +110,24 @@ function saveFavorite() {
 
 
 function mostrarFavoritos() {
-  // document.getElementById("favoritos-title").style.display = "block";
-  // console.log(document.getElementById("favoritos-title"));
-  document.getElementById("result").innerHTML = ""
+  document.getElementById("result").style.display = "none";
   const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-  const contenedor = document.getElementById("favoritos");
-  contenedor.innerHTML = "";
+  const contenedor_all = document.getElementById('favoritos-all');
+  contenedor_all.innerHTML = "";
+
+
+  const title_favoritos = document.createElement('h2');
+  title_favoritos.textContent = 'FAVORITOS';
+  title_favoritos.id = 'favoritos-title';
+  contenedor_all.prepend(title_favoritos);
+
+  const contenedor_cards = document.createElement('div')
+  contenedor_cards.id = 'favoritos';
+  contenedor_cards.classList.add('favoritos-container');
+  contenedor_all.append(contenedor_cards);
 
   favoritos.forEach(p => {
-    contenedor.innerHTML += `
+    contenedor_cards.innerHTML += `
     <div class="favorito-card">
         <h4>${p.nombre.toUpperCase()}</h4>
         <img src="${p.imagen}" alt="${p.nombre}">
